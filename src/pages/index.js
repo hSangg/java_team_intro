@@ -22,6 +22,7 @@ export default function Home() {
 				<h1 className='fixed opacity-50 op top-0 left-1/2 translate-x-[-50%] font-bold'>
 					JAVA PROJECT
 				</h1>
+
 				<Goal />
 				<Intro />
 				<Peudo />

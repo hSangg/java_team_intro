@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { features } from "../utils/data"
 import {
 	textAnimate,
@@ -26,7 +27,7 @@ const Goal = () => {
 					className='text-xl w-[700px] mt-2 mb-[30px]'
 				>
 					Phát triển một{" "}
-					<a class='underline decoration-sky-500'>
+					<a className='underline decoration-sky-500 font-[700] italic'>
 						hệ thống hiệu quả
 					</a>{" "}
 					và tiện dụng để cải thiện và tối ưu hoá quy trình
@@ -34,24 +35,33 @@ const Goal = () => {
 					phục vụ.
 				</motion.p>
 
-				<motion.h1
-					variants={textAnimate}
-					className='font-bold inline-block text-[30px] underline decoration-indigo-500 '
-				>
-					TÍNH NĂNG{" "}
-				</motion.h1>
+				<motion.div variants={textAnimate} className='flex'>
+					<motion.h1 className='font-bold inline-block text-[30px] underline decoration-indigo-500 '>
+						TÍNH NĂNG{" "}
+					</motion.h1>
+					<figure className='bg-yellow-700/40 ml-2  rounded-xl'>
+						<Image
+							width={40}
+							height={40}
+							src='/images/pencil.png'
+						/>
+					</figure>
+				</motion.div>
 
 				<motion.ul
 					initial={"offscreen"}
 					whileInView={"onscreen"}
 					viewport={{ once: false, amount: 1 }}
 					transition={{ staggerChildren: 0.5 }}
-					className='mt-2 bg-blue-800 list-disc'
+					className='mt-2 bg-yellow-800/50 list-disc'
 				>
 					{features.map((x) => (
 						<motion.li
-							className='text-l mb-1 p-1 font-bold'
+							className='text-l mb-1 p-1 font-bold border-b-2 border-indigo-500/70'
 							variants={textAnimate}
+							whileHover={{
+								zoom: 1.2,
+							}}
 						>
 							{x}
 						</motion.li>
