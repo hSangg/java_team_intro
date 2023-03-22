@@ -11,10 +11,10 @@ export const textAnimate = {
 	},
 }
 
-export const textAnimate_1 = {
-	offscreen: { x: 200, opacity: 0 },
+export const rotateAnimation = {
+	offscreen: { rotate: 90, opacity: 0 },
 	onscreen: {
-		x: 0,
+		rotate: 0,
 		opacity: 1,
 		transition: {
 			type: "spring",
@@ -24,33 +24,8 @@ export const textAnimate_1 = {
 	},
 }
 
-export const imgAnimate = {
+export const zoomAnimation = {
 	offscreen: { scale: 0, opacity: 0 },
-	onscreen: {
-		scale: 1,
-		opacity: 1,
-		transition: {
-			type: "spring",
-			bounce: 0.4,
-			duration: 1,
-		},
-	},
-}
-
-export const imgAnimate_1 = {
-	offscreen: { opacity: 0 },
-	onscreen: {
-		opacity: 1,
-		transition: {
-			type: "spring",
-			bounce: 0.4,
-			duration: 1,
-		},
-	},
-}
-
-export const textAnimate_2 = {
-	offscreen: { scale: 1.1, opacity: 0 },
 	onscreen: {
 		scale: 1,
 		opacity: 1,

@@ -1,6 +1,7 @@
 import Head from "next/head"
-import { motion } from "framer-motion"
-import { textAnimate } from "../../utils/farmer_motion"
+import Goal from "../../components/Goal"
+import Intro from "../../components/Intro"
+import Peudo from "../../components/Peudo"
 
 export default function Home() {
 	return (
@@ -17,21 +18,13 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main>
-				<motion.div
-					className='w-full h-screen text-3xl font-bold'
-					initial={"offscreen"}
-					whileInView={"onscreen"}
-					viewport={{ once: false, amount: 1 }}
-					transition={{ staggerChildren: 0.5 }}
-				>
-					<motion.h1 variants={textAnimate}>A</motion.h1>
-					<motion.h1 variants={textAnimate}>B</motion.h1>
-					<motion.h1 variants={textAnimate}>C</motion.h1>
-					<motion.h1 variants={textAnimate}>D</motion.h1>
-					<motion.h1 variants={textAnimate}>E</motion.h1>
-					<motion.h1 variants={textAnimate}>F</motion.h1>
-				</motion.div>
+			<main className='mx-4 my-8 overflow-hidden'>
+				<h1 className='fixed opacity-50 op top-0 left-1/2 translate-x-[-50%] font-bold'>
+					JAVA PROJECT
+				</h1>
+				<Goal />
+				<Intro />
+				<Peudo />
 			</main>
 		</>
 	)
