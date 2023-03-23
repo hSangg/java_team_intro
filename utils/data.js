@@ -10,3 +10,43 @@ export const features = [
 	"Cung cấp tính năng đặt hàng trước.",
 	"Cung cấp tính năng đánh giá và phản hồi.",
 ]
+
+export const member_dataset = {
+	headers: ["MSSV", "Họ Tên", "Giới Thiệu"],
+
+	data: [
+		{
+			name: "Cao Hoài Sang",
+			mssv: "21522541",
+			introduction: "Sinh viên năm 2, Khoa HTTT - UIT",
+		},
+
+		{
+			name: "Thi Thành Công",
+			mssv: "21521897",
+			introduction: "Sinh viên năm 2, Khoa HTTT - UIT",
+		},
+
+		{
+			name: "Trần Xuân Bằng",
+			mssv: "21521847",
+			introduction: "Sinh viên năm 2, Khoa HTTT - UIT",
+		},
+	],
+}
+
+/**
+ * + 21521897, Thi Thành Công
+ * + 21521847, Trần Xuân Bằng
+ *
+ *
+ *C:\Users\Sangf\OneDrive\Desktop\CODE\introduce\public\images\3d_imagine_2.png
+ */
+
+export const images = [
+	"/images/3d_imagine_1.png",
+	"/images/3d_imagine_2.png",
+	"/images/3d_imagine_3.png",
+	"/images/3d_imagine_4.png",
+	"/images/3d_imagine_5.png",
+]

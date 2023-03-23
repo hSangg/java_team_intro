@@ -11,6 +11,18 @@ export const textAnimate = {
 	},
 }
 
+export const opacityAnimate = {
+	offscreen: { opacity: 0 },
+	onscreen: {
+		opacity: 1,
+		transition: {
+			type: "spring",
+			bounce: 0.4,
+			duration: 1,
+		},
+	},
+}
+
 export const rotateAnimation = {
 	offscreen: { rotate: 90, opacity: 0 },
 	onscreen: {

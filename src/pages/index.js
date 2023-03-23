@@ -1,7 +1,8 @@
 import Head from "next/head"
+import AlwayShowOnDisplay from "../../components/AlwayShowOnDisplay"
 import Goal from "../../components/Goal"
-import Intro from "../../components/Intro"
 import Peudo from "../../components/Peudo"
+import TeamTable from "../../components/TeamTable"
 
 export default function Home() {
 	return (
@@ -19,12 +20,10 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className='mx-4 my-8 overflow-hidden'>
-				<h1 className='fixed opacity-50 op top-0 left-1/2 translate-x-[-50%] font-bold'>
-					JAVA PROJECT
-				</h1>
+				<AlwayShowOnDisplay />
 
 				<Goal />
-				<Intro />
+				<TeamTable />
 				<Peudo />
 			</main>
 		</>

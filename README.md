@@ -1,6 +1,4 @@
-ma_lop_mon_hoc
-ma_mon_hoc
-hoc_ky
-nam_hoc
-giang_vien_ly_thuyet
-giang_vien_thuc_hanh
+initial={"offscreen"}
+whileInView={"onscreen"}
+viewport={{ once: false, amount: 1 }}
+transition={{ staggerChildren: 0.5 }}
