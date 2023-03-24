@@ -3,19 +3,18 @@ import { features } from "../utils/data"
 import {
 	opacityAnimate,
 	textAnimate,
-	zoomAnimation,
 } from "../utils/farmer_motion"
 import Slideshow from "./SlideShow"
 
-const Goal = () => {
+const Goal = ({ refTarget }) => {
 	return (
-		<div>
+		<div ref={refTarget}>
 			<motion.div
 				initial={"offscreen"}
 				whileInView={"onscreen"}
 				viewport={{ once: false, amount: 1 }}
 				transition={{ staggerChildren: 0.5 }}
-				className='flex  justify-center mt-20 items-center gap-5 h-full'
+				className='flex  justify-center pt-[200px] items-center gap-5 h-full'
 			>
 				<motion.div variants={textAnimate}>
 					<motion.h1
@@ -61,6 +60,7 @@ const Goal = () => {
 					>
 						{features.map((x) => (
 							<motion.li
+								key={x}
 								className='mb-1 p-1 text-[15px] border-b-[1px] border-indigo-500/60'
 								variants={opacityAnimate}
 								whileHover={{

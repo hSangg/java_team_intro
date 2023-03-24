@@ -5,10 +5,13 @@ import {
 	zoomAnimation,
 } from "../utils/farmer_motion"
 
-const TeamTable = () => {
+const TeamTable = ({ refTarget }) => {
 	const { headers, data } = member_dataset
 	return (
-		<motion.div className='w-full max-w-screen-md mx-auto mt-20'>
+		<motion.div
+			ref={refTarget}
+			className='w-full max-w-screen-md mx-auto pt-[250px]'
+		>
 			<motion.div
 				initial={{
 					opacity: 0,
@@ -26,17 +29,18 @@ const TeamTable = () => {
 				</figure>
 			</motion.div>
 			<motion.div className='overflow-x-hidden'>
-				<motion.table className='table-auto border-blue-500 border-2 border-collapse w-full  shadow-lg bg-transparent'>
+				<motion.table className='table-auto  w-full  shadow-lg bg-transparent'>
 					<motion.thead className=''>
 						<motion.tr
 							initial={"offscreen"}
 							whileInView={"onscreen"}
 							viewport={{ once: false, amount: 1 }}
 							transition={{ staggerChildren: 0.5 }}
-							className='bg-purple-700/20 text-left  text-gray-100 font-bold'
+							className='text-left  text-gray-100 font-bold'
 						>
 							{headers.map((header, index) => (
 								<motion.th
+									key={index}
 									variants={zoomAnimation}
 									className='border-b-4 border-purple-500/30 p-4 '
 								>
@@ -59,15 +63,15 @@ const TeamTable = () => {
 									index % 2 == 0
 										? " bg-gradient-to-b from-slate-600/60"
 										: ""
-								} hover:bg-blue-500 transition-colors duration-400 ease-in-out`}
+								} hover:bg-blue-500 transition-colors duration-400 ease-in-out border-b border-blue-500`}
 							>
-								<motion.td className='border-b border-blue-500 p-4 font-medium text-gray-100'>
+								<motion.td className=' p-4 font-medium text-gray-100'>
 									{member.mssv}
 								</motion.td>
-								<motion.td className='border-b border-blue-500 p-4 font-medium text-gray-100'>
+								<motion.td className=' p-4 font-medium text-gray-100'>
 									{member.name}
 								</motion.td>
-								<motion.td className='border-b border-blue-500 p-4 text-gray-300'>
+								<motion.td className=' p-4 text-gray-300'>
 									{member.introduction}
 								</motion.td>
 							</motion.tr>

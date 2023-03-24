@@ -1,10 +1,25 @@
 import Head from "next/head"
+import { createContext, useContext, useRef } from "react"
 import AlwayShowOnDisplay from "../../components/AlwayShowOnDisplay"
 import Goal from "../../components/Goal"
 import Peudo from "../../components/Peudo"
 import TeamTable from "../../components/TeamTable"
 
+export const targetContext = createContext()
+
 export default function Home() {
+	const target1Ref = useRef()
+	const target2Ref = useRef()
+	const target3Ref = useRef()
+	const target4Ref = useRef()
+
+	const targets = {
+		goalRef: target1Ref,
+		teamTableRef: target2Ref,
+		navigaRef: target4Ref,
+		containerRef: target3Ref,
+	}
+
 	return (
 		<>
 			<Head>
@@ -19,13 +34,15 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className='mx-4 my-8 overflow-hidden'>
-				<AlwayShowOnDisplay />
 
-				<Goal />
-				<TeamTable />
-				<Peudo />
-			</main>
+			<targetContext.Provider value={targets}>
+				<div ref={target3Ref}>
+					<AlwayShowOnDisplay refTarget={target4Ref} />
+					<Goal refTarget={target1Ref} />
+					<TeamTable refTarget={target2Ref} />
+					<Peudo />
+				</div>
+			</targetContext.Provider>
 		</>
 	)
 }

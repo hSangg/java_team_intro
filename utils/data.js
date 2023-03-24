@@ -50,3 +50,14 @@ export const images = [
 	"/images/3d_imagine_4.png",
 	"/images/3d_imagine_5.png",
 ]
+
+export const navigate_data = [
+	{
+		name: "Mục Tiêu",
+		nameRef: "goalRef",
+	},
+	{
+		name: "Thành Viên",
+		nameRef: "teamTableRef",
+	},
+]

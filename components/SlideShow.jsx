@@ -13,7 +13,7 @@ const Slideshow = () => {
 			setCurrent((prevCurrent) =>
 				prevCurrent === length - 1 ? 0 : prevCurrent + 1
 			)
-		}, 1000)
+		}, 2000)
 
 		return () => {
 			clearInterval(interval)
@@ -49,9 +49,13 @@ const Slideshow = () => {
 						</div>
 					))}
 				</div>
-				<div>
+				<div className='flex justify-evenly mt-2 font-bold'>
 					{array_list_number.map((x, i) => (
-						<span key={i} onClick={() => setCurrent(i)}>
+						<span
+							className='block cursor-pointer px-3 py-1 bg-slate-200/25 rounded-full'
+							key={i}
+							onClick={() => setCurrent(i)}
+						>
 							{x}
 						</span>
 					))}
