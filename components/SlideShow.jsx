@@ -13,7 +13,7 @@ const Slideshow = () => {
 			setCurrent((prevCurrent) =>
 				prevCurrent === length - 1 ? 0 : prevCurrent + 1
 			)
-		}, 2000)
+		}, 3000)
 
 		return () => {
 			clearInterval(interval)
@@ -30,7 +30,7 @@ const Slideshow = () => {
 	return (
 		<motion.div
 			variants={zoomAnimation}
-			className='flex items-center w-[500px]'
+			className='flex items-center w-[550px]'
 		>
 			<div className='flex-grow overflow-hidden'>
 				<div
