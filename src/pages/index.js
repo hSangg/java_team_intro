@@ -4,6 +4,7 @@ import AlwayShowOnDisplay from "../../components/AlwayShowOnDisplay"
 import Goal from "../../components/Goal"
 import Peudo from "../../components/Peudo"
 import TeamTable from "../../components/TeamTable"
+import Progress from "../../components/Progress"
 
 export const targetContext = createContext()
 
@@ -12,12 +13,14 @@ export default function Home() {
 	const target2Ref = useRef()
 	const target3Ref = useRef()
 	const target4Ref = useRef()
+	const target5Ref = useRef()
 
 	const targets = {
 		goalRef: target1Ref,
 		teamTableRef: target2Ref,
 		navigaRef: target4Ref,
 		containerRef: target3Ref,
+		processRef: target5Ref,
 	}
 
 	return (
@@ -40,6 +43,7 @@ export default function Home() {
 					<AlwayShowOnDisplay refTarget={target4Ref} />
 					<Goal refTarget={target1Ref} />
 					<TeamTable refTarget={target2Ref} />
+					<Progress refTarget={target5Ref} />
 					<Peudo />
 				</div>
 			</targetContext.Provider>

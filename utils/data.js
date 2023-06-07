@@ -60,4 +60,8 @@ export const navigate_data = [
 		name: "Thành Viên",
 		nameRef: "teamTableRef",
 	},
+	{
+		name: "Tiến độ",
+		nameRef: "processRef",
+	},
 ]
