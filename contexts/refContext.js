@@ -7,6 +7,7 @@ const RefContext = ({ children }) => {
 		goalRef: null,
 		teamtableRef: null,
 		processRef: null,
+		mettingRef: null,
 	}
 	return (
 		<TargetContext.Provider value={targets}>

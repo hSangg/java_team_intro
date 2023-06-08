@@ -1,11 +1,26 @@
 import { motion } from "framer-motion"
 import AssumptionLogic from "./AssumptionLogic"
+import {
+	motionAnimate,
+	textAnimate,
+} from "../utils/farmer_motion"
+import { opacityAnimate } from "../utils/farmer_motion"
+import { rotateAnimation } from "../utils/farmer_motion"
 
 const Progress = ({ refTarget }) => {
 	return (
-		<div ref={refTarget} className='px-[250px] pt-20'>
+		<motion.div
+			ref={refTarget}
+			className='px-[250px] pt-20'
+		>
 			<motion.div className='flex flex-col'>
-				<motion.h1 className='font-bold text-3xl'>
+				<motion.h1
+					initial={"offscreen"}
+					whileInView={"onscreen"}
+					variants={textAnimate}
+					transition={{ staggerChildren: 0.5 }}
+					className='font-bold text-3xl'
+				>
 					Tuần 1, 2
 				</motion.h1>
 				<motion.div className='text-[20px] mt-5'>
@@ -38,7 +53,12 @@ const Progress = ({ refTarget }) => {
 					<motion.p className='mt-2'>
 						USECASE DIAGRAM:
 					</motion.p>
-					<motion.figure className='scale-[0.9]'>
+					<motion.figure
+						initial={"offscreen"}
+						whileInView={"onscreen"}
+						variants={opacityAnimate}
+						className='scale-[0.9]'
+					>
 						<motion.img
 							className='bg-white rounded-[50px]'
 							src='/images/usecase.png'
@@ -47,7 +67,12 @@ const Progress = ({ refTarget }) => {
 					<motion.p className='mt-2'>
 						CLASS DIAGRAM:
 					</motion.p>
-					<motion.figure className='scale-[0.9]'>
+					<motion.figure
+						initial={"offscreen"}
+						whileInView={"onscreen"}
+						variants={opacityAnimate}
+						className='scale-[0.9]'
+					>
 						<motion.img
 							className='bg-white rounded-[50px]'
 							src='/images/classdia.png'
@@ -92,9 +117,82 @@ const Progress = ({ refTarget }) => {
 					<AssumptionLogic />
 					<br></br>
 				</motion.div>
+
+				<motion.h1 className='font-bold text-3xl'>
+					Tuần 3, 4, 5, 6: Phát triển chi tiết
+				</motion.h1>
+
+				<motion.div className='text-[20px] mt-5'>
+					1.{" "}
+					<motion.span className='underline decoration-sky-500'>
+						Phát triển FROND-END: JAVAFX
+					</motion.span>{" "}
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/frontend.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							FXML & CONTROLLER
+						</motion.h3>
+					</motion.figure>
+					<br></br>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/login.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Màng hình login
+						</motion.h3>
+					</motion.figure>
+					<br></br>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/management.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Màng hình quản lý
+						</motion.h3>
+					</motion.figure>
+					<motion.p className='indent-10 my-3 text-[18px]'></motion.p>
+					2.{" "}
+					<motion.span className='underline decoration-sky-500'>
+						Phát triển BACK-END : JAVAs
+					</motion.span>{" "}
+					<motion.p className='mt-2'>
+						Thiết lập kết nối database
+					</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/db.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Code
+						</motion.h3>
+					</motion.figure>
+					<motion.p className='mt-2'>
+						Viết code để thao tác với database
+					</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/dbhandler.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Code
+						</motion.h3>
+					</motion.figure>
+					<br></br>
+					<motion.div className='underline decoration-sky-500'></motion.div>
+					<AssumptionLogic />
+					<br></br>
+				</motion.div>
 				<br></br>
 			</motion.div>
-		</div>
+		</motion.div>
 	)
 }
 

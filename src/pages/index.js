@@ -5,6 +5,7 @@ import Goal from "../../components/Goal"
 import Peudo from "../../components/Peudo"
 import TeamTable from "../../components/TeamTable"
 import Progress from "../../components/Progress"
+import MeetingMinutes from "../../components/MeetingMinutes"
 
 export const targetContext = createContext()
 
@@ -14,6 +15,7 @@ export default function Home() {
 	const target3Ref = useRef()
 	const target4Ref = useRef()
 	const target5Ref = useRef()
+	const target6Ref = useRef()
 
 	const targets = {
 		goalRef: target1Ref,
@@ -21,6 +23,7 @@ export default function Home() {
 		navigaRef: target4Ref,
 		containerRef: target3Ref,
 		processRef: target5Ref,
+		mettingRef: target6Ref,
 	}
 
 	return (
@@ -44,6 +47,7 @@ export default function Home() {
 					<Goal refTarget={target1Ref} />
 					<TeamTable refTarget={target2Ref} />
 					<Progress refTarget={target5Ref} />
+					<MeetingMinutes refTarget={target6Ref} />
 					<Peudo />
 				</div>
 			</targetContext.Provider>
