@@ -187,7 +187,6 @@ const Progress = ({ refTarget }) => {
 					</motion.figure>
 					<br></br>
 					<motion.div className='underline decoration-sky-500'></motion.div>
-					<AssumptionLogic />
 					<br></br>
 				</motion.div>
 				<br></br>
