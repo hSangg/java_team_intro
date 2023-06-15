@@ -185,6 +185,59 @@ const Progress = ({ refTarget }) => {
 							Code
 						</motion.h3>
 					</motion.figure>
+					<motion.p className='mt-2 text-2xl underline mb-2 decoration-sky-500'>
+						Kiểm thử các tình huống phát sinh
+					</motion.p>
+					<motion.p>
+						Trường hợp 1 khách hàng chọn món có thế nấu với
+						số lượng lớn, vượt qua lượng nguyên liệu trong
+						kho thì sẽ báo lỗi
+					</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/kt_1.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Trường hợp 1
+						</motion.h3>
+					</motion.figure>
+					<motion.p>
+						Trường hợp 2 quản lý cùng chỉnh sửa trên 1 thuộc
+						tính giá món ăn thì hệ thống sẽ báo lỗi.
+					</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/kt_2.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Trường hợp 2
+						</motion.h3>
+					</motion.figure>
+					<motion.p className='mt-2 text-2xl underline mb-2 decoration-sky-500'>
+						Kiểm thử với Sonarqube
+					</motion.p>
+					<motion.p>Kết quả chạy thử sonarqube</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/sona.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Kết quả chạy thử sonarqube
+						</motion.h3>
+					</motion.figure>
+					<motion.p>Bảng tổng quát code</motion.p>
+					<motion.figure className='scale-[0.9] flex-row'>
+						<motion.img
+							className='bg-white rounded-[50px]'
+							src='/images/overall.png'
+						/>
+						<motion.h3 className='text-center mt-2'>
+							Bảng tổng quát code
+						</motion.h3>
+					</motion.figure>
 					<br></br>
 					<motion.div className='underline decoration-sky-500'></motion.div>
 					<br></br>

@@ -43,8 +43,8 @@ function MeetingMinutes({ refTarget }) {
 					</h4>
 					<ul className='list-disc ml-6'>
 						<li>
-							Mỗi thành viên trình bày tình hình tiến độ
-							công việc trong tuần trước của mình.
+							Trình bày tình hình tiến độ công việc trong
+							tuần trước của mình.
 						</li>
 						<li>
 							Thảo luận về các vấn đề liên quan và đưa ra
