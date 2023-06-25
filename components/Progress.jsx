@@ -6,6 +6,7 @@ import {
 } from "../utils/farmer_motion"
 import { opacityAnimate } from "../utils/farmer_motion"
 import { rotateAnimation } from "../utils/farmer_motion"
+import Diagram from "./Diagram"
 
 const Progress = ({ refTarget }) => {
 	return (
@@ -21,7 +22,11 @@ const Progress = ({ refTarget }) => {
 					transition={{ staggerChildren: 0.5 }}
 					className='font-bold text-3xl'
 				>
-					Tuần 1, 2
+					Tuần lễ thiết kế{" "}
+					<span className='line-through opacity-40'>
+						thời trang
+					</span>{" "}
+					sơ đồ
 				</motion.h1>
 				<motion.div className='text-[20px] mt-5'>
 					1.{" "}
@@ -50,34 +55,44 @@ const Progress = ({ refTarget }) => {
 					<motion.span className='underline decoration-sky-500'>
 						Thiết kế CSDL
 					</motion.span>{" "}
-					<motion.p className='mt-2'>
-						USECASE DIAGRAM:
-					</motion.p>
-					<motion.figure
-						initial={"offscreen"}
-						whileInView={"onscreen"}
-						variants={opacityAnimate}
-						className='scale-[0.9]'
-					>
-						<motion.img
-							className='bg-white rounded-[50px]'
-							src='/images/usecase.png'
-						/>
-					</motion.figure>
-					<motion.p className='mt-2'>
-						CLASS DIAGRAM:
-					</motion.p>
-					<motion.figure
-						initial={"offscreen"}
-						whileInView={"onscreen"}
-						variants={opacityAnimate}
-						className='scale-[0.9]'
-					>
-						<motion.img
-							className='bg-white rounded-[50px]'
-							src='/images/classdia.png'
-						/>
-					</motion.figure>
+					<Diagram
+						name='Sơ đồ use-case'
+						nameImage='usecase'
+					/>
+					<Diagram
+						name='Sơ đồ hoạt động nhân viên đăng nhập'
+						nameImage='ActivityDiagram_login'
+					/>
+					<Diagram
+						name='Sơ đồ hoạt động khách hàng đặt hàng'
+						nameImage='ActivityDiagram12_order'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
+						nameImage='SequenceDiagram111_login'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
+						nameImage='SequenceDiagram111_login'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case xủ lý đơn đặt hàng'
+						nameImage='DatMonsequenceDiagram1'
+					/>
+					<Diagram name='Sơ đồ lớp' nameImage='classdia' />
+					<Diagram
+						name='Sơ đồ trạng thái cho use-case đặt nguyên liệu'
+						nameImage='state_datnl'
+					/>
+					<Diagram
+						name='Sơ đồ trạng thái cho use-case xử lý đơn đặt hàng'
+						nameImage='state_xulydh'
+					/>
+					<Diagram
+						name='Sơ đồ trạng thái cho use-case nhân viên đăng nhập'
+						nameImage='state_login'
+					/>
+					<Diagram name='Lượt đồ ER' nameImage='ER' />
 					<br></br>{" "}
 					<motion.div>
 						<motion.h1 className='underline decoration-sky-500'>
