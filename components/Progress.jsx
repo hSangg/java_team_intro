@@ -68,6 +68,10 @@ const Progress = ({ refTarget }) => {
 						nameImage='ActivityDiagram12_order'
 					/>
 					<Diagram
+						name='Sơ đồ hoạt động đặt thêm nguyên liệu của cửa hàng'
+						nameImage='acti_datnl'
+					/>
+					<Diagram
 						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
 						nameImage='SequenceDiagram111_login'
 					/>
