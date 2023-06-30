@@ -1,10 +1,20 @@
 import { motion } from "framer-motion"
-import { opacityAnimate } from "../utils/farmer_motion"
+import {
+	opacityAnimate,
+	textAnimate,
+} from "../utils/farmer_motion"
 
 const Diagram = ({ name, nameImage }) => {
 	return (
 		<>
-			<motion.p className='mt-2'>{name}</motion.p>
+			<motion.p
+				initial={"offscreen"}
+				whileInView={"onscreen"}
+				variants={textAnimate}
+				className='mt-2'
+			>
+				{name}
+			</motion.p>
 			<motion.figure
 				initial={"offscreen"}
 				whileInView={"onscreen"}

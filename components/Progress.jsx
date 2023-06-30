@@ -7,6 +7,7 @@ import {
 import { opacityAnimate } from "../utils/farmer_motion"
 import { rotateAnimation } from "../utils/farmer_motion"
 import Diagram from "./Diagram"
+import UseCaseList from "./UseCaseList"
 
 const Progress = ({ refTarget }) => {
 	return (
@@ -59,6 +60,10 @@ const Progress = ({ refTarget }) => {
 						name='Sơ đồ use-case'
 						nameImage='usecase'
 					/>
+					<UseCaseList />
+					<motion.h1 className='text-[150px] font-[900]'>
+						Sơ đồ hoạt động
+					</motion.h1>
 					<Diagram
 						name='Sơ đồ hoạt động nhân viên đăng nhập'
 						nameImage='ActivityDiagram_login'
@@ -72,16 +77,48 @@ const Progress = ({ refTarget }) => {
 						nameImage='acti_datnl'
 					/>
 					<Diagram
-						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
-						nameImage='SequenceDiagram111_login'
+						name='Sơ đồ hoạt động nhân viên đổi mật khẩu'
+						nameImage='ac_doimk'
+					/>
+					<Diagram
+						name='Sơ đồ hoạt động quản lý nhân viên'
+						nameImage='ac_qlnv'
+					/>
+					<Diagram
+						name='Sơ đồ hoạt động báo cáo'
+						nameImage='ac_baocao'
 					/>
 					<Diagram
 						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
 						nameImage='SequenceDiagram111_login'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case đặt thêm nguyên liệu của cửa hàng'
+						nameImage='se_datnl'
 					/>
 					<Diagram
 						name='Sơ đồ tuần tự use-case xủ lý đơn đặt hàng'
 						nameImage='DatMonsequenceDiagram1'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case xủ lý đơn đặt hàng'
+						nameImage='DatMonsequenceDiagram1'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case đặt nguyên liệu'
+						nameImage='se_datnl'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case đổi mật khẩu nhân viên'
+						nameImage='seq_doimk'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case quản lý thực đơn'
+						nameImage='seq_qlthucdon'
+					/>
+					<Diagram
+						name='Sơ đồ tuần tự use-case quản lý nhân viên'
+						nameImage='sq_qlnv'
 					/>
 					<Diagram name='Sơ đồ lớp' nameImage='classdia' />
 					<Diagram
