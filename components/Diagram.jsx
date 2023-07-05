@@ -22,7 +22,7 @@ const Diagram = ({ name, nameImage }) => {
 				className='scale-[0.9]'
 			>
 				<motion.img
-					className='bg-white rounded-[50px]'
+					className='bg-white rounded-[20px]'
 					src={`/images/${nameImage}.png`}
 				/>
 			</motion.figure>

@@ -8,6 +8,8 @@ import { opacityAnimate } from "../utils/farmer_motion"
 import { rotateAnimation } from "../utils/farmer_motion"
 import Diagram from "./Diagram"
 import UseCaseList from "./UseCaseList"
+import OrganizationalChart from "./OrganizationalChart"
+import { TextContainer } from "./TextContainer"
 
 const Progress = ({ refTarget }) => {
 	return (
@@ -52,6 +54,14 @@ const Progress = ({ refTarget }) => {
 						thương hiệu ngoại như McDonald’s, KFC, Pizza
 						Hut, Starbucks, Burger King,…
 					</motion.p>
+					<motion.span className='underline font-bold decoration-sky-500'>
+						Khảo sát
+					</motion.span>
+					<Diagram
+						name='Sơ đồ hiện trạng tổ chức'
+						nameImage='mhql'
+					/>
+					<OrganizationalChart />
 					2.{" "}
 					<motion.span className='underline decoration-sky-500'>
 						Thiết kế CSDL
@@ -73,6 +83,10 @@ const Progress = ({ refTarget }) => {
 						nameImage='ActivityDiagram12_order'
 					/>
 					<Diagram
+						name='Sơ đồ hoạt động khách hàng đặt hàng online'
+						nameImage='ac_datonline'
+					/>
+					<Diagram
 						name='Sơ đồ hoạt động đặt thêm nguyên liệu của cửa hàng'
 						nameImage='acti_datnl'
 					/>
@@ -88,9 +102,16 @@ const Progress = ({ refTarget }) => {
 						name='Sơ đồ hoạt động báo cáo'
 						nameImage='ac_baocao'
 					/>
+					<motion.h1 className='text-[150px] font-[900]'>
+						Sơ đồ tuần tự
+					</motion.h1>
 					<Diagram
 						name='Sơ đồ tuần tự use-case nhân viên đăng nhập'
 						nameImage='SequenceDiagram111_login'
+					/>
+					<Diagram
+						name='Test-case use-case nhân viên đăng nhập'
+						nameImage='tc_login'
 					/>
 					<Diagram
 						name='Sơ đồ tuần tự use-case đặt thêm nguyên liệu của cửa hàng'
@@ -101,8 +122,8 @@ const Progress = ({ refTarget }) => {
 						nameImage='DatMonsequenceDiagram1'
 					/>
 					<Diagram
-						name='Sơ đồ tuần tự use-case xủ lý đơn đặt hàng'
-						nameImage='DatMonsequenceDiagram1'
+						name='Test-case use-case xủ lý đơn đặt hàng'
+						nameImage='tc_datmon'
 					/>
 					<Diagram
 						name='Sơ đồ tuần tự use-case đặt nguyên liệu'
@@ -120,7 +141,13 @@ const Progress = ({ refTarget }) => {
 						name='Sơ đồ tuần tự use-case quản lý nhân viên'
 						nameImage='sq_qlnv'
 					/>
+					<motion.h1 className='text-[150px] font-[900]'>
+						Sơ đồ lớp
+					</motion.h1>
 					<Diagram name='Sơ đồ lớp' nameImage='classdia' />
+					<motion.h1 className='text-[150px] font-[900]'>
+						Sơ đồ trạng thái
+					</motion.h1>
 					<Diagram
 						name='Sơ đồ trạng thái cho use-case đặt nguyên liệu'
 						nameImage='state_datnl'
@@ -132,6 +159,14 @@ const Progress = ({ refTarget }) => {
 					<Diagram
 						name='Sơ đồ trạng thái cho use-case nhân viên đăng nhập'
 						nameImage='state_login'
+					/>
+					<Diagram
+						name='Sơ đồ trạng thái cho use-case quản lý nhân viên'
+						nameImage='st_qlnv'
+					/>
+					<Diagram
+						name='Sơ đồ trạng thái cho use-case quản lý nguyên liệu'
+						nameImage='st_qlnl'
 					/>
 					<Diagram name='Lượt đồ ER' nameImage='ER' />
 					<br></br>{" "}
@@ -297,6 +332,10 @@ const Progress = ({ refTarget }) => {
 					<br></br>
 					<motion.div className='underline decoration-sky-500'></motion.div>
 					<br></br>
+					<motion.h1 className='text-[150px] font-[900]'>
+						Hướng phát triển
+					</motion.h1>
+					<TextContainer />
 				</motion.div>
 				<br></br>
 			</motion.div>

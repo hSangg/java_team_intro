@@ -20,7 +20,7 @@ const UseCaseList = () => {
 	]
 
 	return (
-		<div className='bg-gray-200 p-4  text-black rounded-md p-10 mb-10'>
+		<div className='bg-gray-200 text-black rounded-md p-[50px] mb-10'>
 			<h1 className='text-2xl font-bold mb-4'>
 				Danh sách các Use-Case
 			</h1>
